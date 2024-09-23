@@ -1,56 +1,37 @@
 import React, { useState } from 'react';
 import Slider from 'react-slick';
-import { FaPhoneAlt } from 'react-icons/fa'
+import { FaPhoneAlt } from 'react-icons/fa';
 
 const HomePage: React.FC = () => {
-  const [selectedCard, setSelectedCard] = useState<number | null>(null);
   const [activeFAQ, setActiveFAQ] = useState<number | null>(null);
 
   const handleFAQClick = (index: number) => {
     setActiveFAQ(activeFAQ === index ? null : index);
   };
 
-  const handleCardClick = (index: number) => {
-    setSelectedCard(index);
-  };
-
   const sliderSettings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 1,
     slidesToScroll: 1,
     appendDots: (dots: any) => (
-      <div
-        style={{
-          position: 'absolute',
-          bottom: '-30px',
-          width: '100%',
-          textAlign: 'center',
-        }}
-      >
+      <div style={{ position: 'absolute', bottom: '-30px', width: '100%', textAlign: 'center' }}>
         <ul style={{ margin: '0px' }}>{dots}</ul>
       </div>
     ),
     customPaging: (i: number) => (
-      <div
-        style={{
-          width: '10px',
-          height: '10px',
-          borderRadius: '50%',
-          backgroundColor: 'orange',
-        }}
-      />
+      <div style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: 'orange' }} />
     ),
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 relative">
-      <div className="relative">
+    <div className="min-h-screen bg-black-100 relative flex flex-col items-center">
+      <div className="relative w-full">
         <img
           src={`${process.env.PUBLIC_URL}/assets/car.jpg`}
           alt="Car"
-          className="w-full h-80 object-cover" 
+          className="w-full h-80 object-cover"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white bg-black bg-opacity-50 p-4">
           <h2 className="text-3xl font-bold mb-4 text-center">Welcome to Our Services</h2>
@@ -66,10 +47,10 @@ const HomePage: React.FC = () => {
         </div>
       </div>
 
-      <div className="bg-black text-white p-8">
+      <div className="bg-black text-white p-8 w-full">
         <h3 className="text-orange-500 text-xl font-semibold mb-2 text-center">Plan Your Trip Now</h3>
         <h4 className="text-lg mb-4 text-center">Quick and Easy Car Rental</h4>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mx-auto max-w-4xl">
           {['Compact Car', 'SUV', 'Luxury Sedan'].map((car, index) => (
             <div key={index} className="text-center max-w-xs mx-auto">
               <img
@@ -90,17 +71,17 @@ const HomePage: React.FC = () => {
         </div>
       </div>
 
-      <div className="bg-black text-white p-8">
+      <div className="bg-black text-white p-8 w-full">
         <h3 className="text-orange-500 text-xl font-semibold mb-2 text-center">Professional Chauffeur Services</h3>
         <p className="text-center text-gray-300 mb-6">Experience the best in luxury and convenience with our professional chauffeur services.</p>
         <div className="flex justify-center mb-6">
           <img
             src={`${process.env.PUBLIC_URL}/assets/ch.png`}
             alt="Chauffeur Service"
-            className="h-40 w-96   rounded"
+            className="h-40 w-96 rounded"
           />
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mx-auto max-w-4xl">
           {[{
               title: '24/7 Availability', description: 'Our chauffeurs are available around the clock to meet your travel needs.' },
             { title: 'Luxury Vehicles', description: 'Travel in style with our fleet of luxury vehicles.' },
@@ -120,36 +101,32 @@ const HomePage: React.FC = () => {
         </div>
       </div>
 
-      <div className="bg-black text-white p-5 px-6 flex flex-col sm:flex-row items-center justify-center space-y-6 sm:space-y-0 sm:space-x-8">
-        <div className="w-4/5 sm:w-1/4">
-          <img
-            src={`${process.env.PUBLIC_URL}/assets/img.png`}
-            alt="Special Offer"
-            className="w-full h-auto rounded-lg"
-          />
+      <div className="bg-black text-white p-5 flex flex-col sm:flex-row items-center justify-center space-y-6 sm:space-y-0 sm:space-x-8 w-full">
+  <div className="w-full sm:w-1/3 sm:ml-80"> {/* Added margin to the right of the image */}
+    <img
+      src={`${process.env.PUBLIC_URL}/assets/img.png`}
+      alt="Special Offer"
+      className="w-full h-auto rounded-lg"
+    />
+  </div>
+  <div className="sm:w-2/3 text-center sm:text-left">
+    <h4 className="text-orange-500 text-lg font-semibold mb-2">Special Offer</h4>
+    <h2 className="text-3xl font-bold mb-4">Get 50% Off on Your First Ride</h2>
+    <p className="text-gray-300 mb-6">Don't miss out on our limited-time offer. Book your first ride today.</p>
+    <div className="flex flex-wrap justify-center sm:justify-start gap-4">
+      {['25%', '100%', '30%'].map((discount, index) => (
+        <div key={index} className="text-center w-1/2 sm:w-auto">
+          <img src={`${process.env.PUBLIC_URL}/assets/car4.png`} alt={`Icon ${index + 1}`} className="w-10 h-10 mx-auto mb-2" />
+          <p className="text-white text-xl font-bold">{discount}</p>
         </div>
-        <div className="w-full sm:w-2/3 text-center sm:text-left">
-          <h4 className="text-orange-500 text-lg font-semibold mb-2">Special Offer</h4>
-          <h2 className="text-3xl font-bold mb-4">Get 50% Off on Your First Ride</h2>
-          <p className="text-gray-300 mb-6">Don't miss out on our limited-time offer. Book your first ride today.</p>
-          <div className="flex flex-wrap justify-center sm:justify-start gap-4">
-            <div className="text-center">
-              <img src={`${process.env.PUBLIC_URL}/assets/car4.png`} alt="Icon 1" className="w-10 h-10 mx-auto mb-2" />
-              <p className="text-white text-xl font-bold">25%</p>
-            </div>
-            <div className="text-center">
-              <img src={`${process.env.PUBLIC_URL}/assets/car4.png`} alt="Icon 2" className="w-10 h-10 mx-auto mb-2" />
-              <p className="text-white text-xl font-bold">100%</p>
-            </div>
-            <div className="text-center">
-              <img src={`${process.env.PUBLIC_URL}/assets/car4.png`} alt="Icon 3" className="w-10 h-10 mx-auto mb-2" />
-              <p className="text-white text-xl font-bold">30%</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      ))}
+    </div>
+  </div>
+</div>
 
-      <div className="relative">
+
+
+      <div className="relative w-full">
         <img
           src={`${process.env.PUBLIC_URL}/assets/ccars.jpg`}
           alt="New Offer"
@@ -166,41 +143,41 @@ const HomePage: React.FC = () => {
         </div>
       </div>
 
-      <div
-        className="relative bg-cover bg-center bg-no-repeat p-8 flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12"
-        style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/tyre.jpg)`,
-        }}
-      >
-        <div className="w-full md:w-1/2 text-center md:text-left">
-          <h4 className="text-orange-500 text-lg font-semibold mb-2">Our Advantage</h4>
-          <h2 className="text-3xl font-bold mb-6">Why Choose Us</h2>
-          <div className="space-y-4">
-            {[{ icon: 'car4.png', title: 'Best Rates' },
-              { icon: 'car4.png', title: 'Premium Service' },
-              { icon: 'car4.png', title: 'Experienced Drivers' }
-            ].map((item, index) => (
-              <div key={index} className="flex items-center justify-center md:justify-start">
-                <img src={`${process.env.PUBLIC_URL}/assets/${item.icon}`} alt={item.title} className="w-8 h-8 mr-4" />
-                <p className="text-lg text-white">{item.title}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+      <div className="relative bg-cover bg-center bg-no-repeat p-8 flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12 w-full" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/tyre.jpg)` }}>
+      <div className="w-full md:w-1/2 flex flex-col items-center text-center">
+  <h4 className="text-orange-500 text-lg font-semibold mb-2">Our Advantage</h4>
+  <h2 className="text-3xl font-bold mb-6">Why Choose Us</h2>
+  <div className="space-y-4 w-full">
+  {[
+    { icon: 'car4.png', title: 'Best Rates' },
+    { icon: 'car4.png', title: 'Premium Service' },
+    { icon: 'car4.png', title: 'Experienced Drivers' }
+  ].map((item, index) => (
+    <div key={index} className="flex items-center justify-center">
+      <img src={`${process.env.PUBLIC_URL}/assets/${item.icon}`} alt={item.title} className="w-8 h-8 mr-4" />
+      <p className="text-lg text-white">{item.title}</p>
+    </div>
+  ))}
+</div>
 
-        <div className="w-full md:w-1/2 flex flex-col items-center text-center md:text-left space-y-4">
-          <div>
-            <h2 className="text-orange-500 text-5xl font-bold">25+</h2>
-            <p className="text-white text-lg">Years of Experience</p>
-          </div>
-          <div>
-            <h2 className="text-orange-500 text-5xl font-bold">1570+</h2>
-            <p className="text-white text-lg">Satisfied Clients</p>
-          </div>
-        </div>
-      </div>
+</div>
 
-      <div className="bg-black text-white p-8">
+
+  <div className="w-full md:w-1/2 flex flex-col items-center text-center space-y-4">
+    <div>
+      <h2 className="text-orange-500 text-5xl font-bold">25+</h2>
+      <p className="text-white text-lg">Years of Experience</p>
+    </div>
+    <div>
+      <h2 className="text-orange-500 text-5xl font-bold">1570+</h2>
+      <p className="text-white text-lg">Satisfied Clients</p>
+    </div>
+  </div>
+</div>
+
+
+
+      <div className="bg-black text-white p-8 w-full">
         <div className="text-center mb-6">
           <h4 className="text-orange-500 text-lg font-semibold mb-2">What Our Clients Say</h4>
           <h2 className="text-3xl font-bold mb-4">Testimonials</h2>
@@ -234,7 +211,7 @@ const HomePage: React.FC = () => {
               image: "person4.jpg"
             }
           ].map((testimonial, index) => (
-            <div key={index} className="bg-gray-800 text-white p-6 rounded-lg shadow-lg mx-auto gap-6 py-12 relative" style={{ width: '250px' }}>
+            <div key={index} className="bg-gray-800 text-white p-6 rounded-lg shadow-lg mx-auto gap-6 py-12 relative" style={{ width: '90%', maxWidth: '300px' }}>
               <p className="text-lg italic mb-4">"{testimonial.quote}"</p>
               <div className="absolute bottom-4 left-4 flex items-center space-x-3">
                 <img
@@ -252,8 +229,8 @@ const HomePage: React.FC = () => {
         </Slider>
       </div>
 
-        {/* FAQs Section */}
-        <div className="bg-black text-white p-12 mb-12 px-52">
+      {/* FAQs Section */}
+      <div className="bg-black text-white p-12 mb-12 w-full">
         <div className="text-center mb-8">
           <h4 className="text-orange-500 text-lg font-semibold mb-2">Have Questions?</h4>
           <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
@@ -261,7 +238,7 @@ const HomePage: React.FC = () => {
           <div className="border-t-2 border-orange-500 w-24 mx-auto mb-8"></div>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-4 mx-auto max-w-3xl">
           {[{
             question: "What types of vehicles do you offer?",
             answer: "We offer a wide range of vehicles including compact cars, SUVs, and luxury sedans to fit your needs."
@@ -285,8 +262,6 @@ const HomePage: React.FC = () => {
           ))}
         </div>
       </div>
-
-
     </div>
   );
 };
