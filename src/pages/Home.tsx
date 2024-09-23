@@ -13,7 +13,7 @@ const HomePage: React.FC = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
     appendDots: (dots: any) => (
       <div style={{ position: 'absolute', bottom: '-30px', width: '100%', textAlign: 'center' }}>
@@ -185,48 +185,51 @@ const HomePage: React.FC = () => {
           <div className="border-t-2 border-orange-500 w-24 mx-auto"></div>
         </div>
 
-        <Slider {...sliderSettings} className="mt-8 flex justify-center gap-4">
-          {[{
-              quote: "Exceptional service and very professional. Highly recommend!",
-              name: "John Doe",
-              location: "Boston Area",
-              image: "person1.jpg"
-            },
-            {
-              quote: "A wonderful experience from start to finish. Will use again!",
-              name: "Jane Smith",
-              location: "New York Area",
-              image: "person2.jpg"
-            },
-            {
-              quote: "Fantastic service, comfortable rides, and great value!",
-              name: "Alice Johnson",
-              location: "Los Angeles Area",
-              image: "person3.jpg"
-            },
-            {
-              quote: "Top-notch service with friendly drivers. Highly satisfied!",
-              name: "Bob Brown",
-              location: "Chicago Area",
-              image: "person4.jpg"
-            }
-          ].map((testimonial, index) => (
-            <div key={index} className="bg-gray-800 text-white p-6 rounded-lg shadow-lg mx-auto gap-6 py-12 relative" style={{ width: '90%', maxWidth: '300px' }}>
-              <p className="text-lg italic mb-4">"{testimonial.quote}"</p>
-              <div className="absolute bottom-4 left-4 flex items-center space-x-3">
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/boy.jfif`}
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full border-2 border-orange-500"
-                />
-                <div>
-                  <h5 className="text-orange-500 font-bold">{testimonial.name}</h5>
-                  <p className="text-gray-400">{testimonial.location}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </Slider>
+        <Slider {...sliderSettings} className="mt-8">
+  {[{
+      quote: "Exceptional service and very professional. Highly recommend!",
+      name: "John Doe",
+      location: "Boston Area",
+      image: "person1.jpg"
+    },
+    {
+      quote: "A wonderful experience from start to finish. Will use again!",
+      name: "Jane Smith",
+      location: "New York Area",
+      image: "person2.jpg"
+    },
+    {
+      quote: "Fantastic service, comfortable rides, and great value!",
+      name: "Alice Johnson",
+      location: "Los Angeles Area",
+      image: "person3.jpg"
+    },
+    {
+      quote: "Top-notch service with friendly drivers. Highly satisfied!",
+      name: "Bob Brown",
+      location: "Chicago Area",
+      image: "person4.jpg"
+    }
+  ].map((testimonial, index) => (
+    <div key={index} className="px-4 mb-24"> {/* Add px-4 to create horizontal space */}
+      <div className="bg-gray-800 text-white p-6 rounded-lg shadow-lg py-12 relative">
+        <p className="text-lg italic mb-4">"{testimonial.quote}"</p>
+        <div className="absolute bottom-4 left-4 flex items-center space-x-3">
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/boy.jfif`}
+            alt={testimonial.name}
+            className="w-12 h-12 rounded-full border-2 border-orange-500"
+          />
+          <div>
+            <h5 className="text-orange-500 font-bold">{testimonial.name}</h5>
+            <p className="text-gray-400">{testimonial.location}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  ))}
+</Slider>
+
       </div>
 
       {/* FAQs Section */}
