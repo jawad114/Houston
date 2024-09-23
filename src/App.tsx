@@ -9,9 +9,10 @@ import HealthSafety from './pages/HealthSafety';
 import ContactUs from './pages/ContactUs';
 import Fleet from './pages/Fleet';
 import Services from './pages/Services';
-import DarkModeToggle from './components/DarkModeToggle';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Signup from './components/signup';
+import Login from './components/login';
 
 const App = () => {
   const contactInfo = {
@@ -37,6 +38,8 @@ const App = () => {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/fleet" element={<Fleet />} />
           <Route path="/services" element={<Services />} />
+          <Route path='/signup' element={<Signup />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
         <Footer />
       </div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaEnvelope, FaPhoneAlt, FaBars, FaTimes } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 interface NavbarProps {
   brandName: string;
@@ -14,6 +15,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ brandName, imageSrcPath, navItems, contactInfo }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -54,7 +56,7 @@ const Navbar: React.FC<NavbarProps> = ({ brandName, imageSrcPath, navItems, cont
           {navItems.map((item, index) => (
             <li key={index}>
               <Link to={`/${item.toLowerCase()}`} className="text-gray-600 hover:text-gray-700 transition-colors duration-200">
-                {item}
+                {item }
               </Link>
             </li>
           ))}
@@ -62,10 +64,10 @@ const Navbar: React.FC<NavbarProps> = ({ brandName, imageSrcPath, navItems, cont
 
         {/* Sign In / Register Buttons (Visible on larger screens) */}
         <div className="hidden md:flex space-x-4">
-          <button className="px-4 py-2 bg-white text-black rounded-lg hover:bg-orange-600 transition-colors duration-200">
+          <button onClick={() => navigate('/login')} className="px-4 py-2 bg-white text-black rounded-lg hover:bg-orange-600 transition-colors duration-200">
             Sign In
           </button>
-          <button className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-yellow-600 transition-colors duration-200">
+          <button onClick={() => navigate('/signup')} className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-yellow-600 transition-colors duration-200">
             Register
           </button>
         </div>
@@ -95,7 +97,7 @@ const Navbar: React.FC<NavbarProps> = ({ brandName, imageSrcPath, navItems, cont
             </button>
           </li>
           <li>
-            <button className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-yellow-600 transition-colors duration-200 w-full text-center">
+            <button onClick={() => setIsMenuOpen(false)} className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-yellow-600 transition-colors duration-200 w-full text-center">
               Register
             </button>
           </li>
