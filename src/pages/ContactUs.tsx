@@ -29,33 +29,29 @@ const ContactUs: React.FC = () => {
         <div className="w-24 mx-auto border-t-4 border-orange-600 "></div>
       </div>
 
-      {/* Grid Section with Icons */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-10 pb-10  bg-black ">
-        {/* Row 1 */}
-        <div className="flex flex-col  items-center ">
-          <img src={`${process.env.PUBLIC_URL}/assets/call.png`} alt="Phone Icon" className="w-12 h-12 mb-4" />
-          <h3 className="text-xl font-bold text-orange-500 mb-2">Phone</h3>
-          <p className="text-gray-300 text-center">
-            Call us at +123 456 7890
-          </p>
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-10 pb-10 bg-black">
+  {/* Row 1 */}
+  <div className="flex flex-col items-center justify-center text-center">
+    <img src={`${process.env.PUBLIC_URL}/assets/call.png`} alt="Phone Icon" className="w-12 h-12 mb-4" />
+    <h3 className="text-xl font-bold text-orange-500 mb-2">Phone</h3>
+    <p className="text-gray-300">Call us at +123 456 7890</p>
+  </div>
 
-        <div className="flex flex-col items-center">
-          <img src={`${process.env.PUBLIC_URL}/assets/call.png`} alt="Email Icon" className="w-12 h-12 mb-4" />
-          <h3 className="text-xl font-bold text-orange-500 mb-2">Email</h3>
-          <p className="text-gray-300 text-center">
-            Drop us a line at support@example.com
-          </p>
-        </div>
+  <div className="flex flex-col items-center justify-center text-center">
+    <img src={`${process.env.PUBLIC_URL}/assets/call.png`} alt="Email Icon" className="w-12 h-12 mb-4" />
+    <h3 className="text-xl font-bold text-orange-500 mb-2">Email</h3>
+    <p className="text-gray-300">Drop us a line at support@example.com</p>
+  </div>
 
-        <div className="flex flex-col items-center">
-          <img src={`${process.env.PUBLIC_URL}/assets/call.png`} alt="Location Icon" className="w-12 h-12 mb-4" />
-          <h3 className="text-xl font-bold text-orange-500 mb-2">Location</h3>
-          <p className="text-gray-300 text-center">
-            Visit us at 123 Example Street, City, Country.
-          </p>
-        </div>
-      </div>
+  <div className="flex flex-col items-center justify-center text-center">
+    <img src={`${process.env.PUBLIC_URL}/assets/call.png`} alt="Location Icon" className="w-12 h-12 mb-4" />
+    <h3 className="text-xl font-bold text-orange-500 mb-2">Location</h3>
+    <p className="text-gray-300">Visit us at 123 Example Street, City, Country.</p>
+  </div>
+</div>
+
+
+
 
       {/* New Container for Message Us Section */}
       <div className="bg-gray-900 p-10 pb-40  flex flex-col md:flex-row justify-between items-center">
@@ -63,6 +59,12 @@ const ContactUs: React.FC = () => {
         <div className="mb-8 md:mb-0 md:w-1/2">
           <h2 className="text-3xl font-bold text-orange-500 mb-4">Message Us</h2>
           <p className="text-gray-300">
+            Send us a message using the form, and we'll respond as soon as possible. <br />
+            Send us a message using the form, and we'll respond as soon as possible.
+            Send us a message using the form, and we'll respond as soon as possible. <br />
+            Send us a message using the form, and we'll respond as soon as possible.
+            Send us a message using the form, and we'll respond as soon as possible. <br />
+            Send us a message using the form, and we'll respond as soon as possible.
             Send us a message using the form, and we'll respond as soon as possible.
           </p>
         </div>

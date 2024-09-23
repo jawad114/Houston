@@ -24,7 +24,10 @@ function HealthSafety() {
         </p>
         <h1 className='text-white text-2xl font-bold mb-4 text-center' >Your Safety Always Comes First with Our <br />
         Professional Chauffeur Service</h1>
-        <p className='mb-10 text-center text-white '>We believe that your ride should not only be comfortable, but as safe as possible. <br /> To ensure this, we have a variety of procedures in place to
+        <p className='mb-10 text-center text-white '>
+protect themselves as well as our clients. Additionally, we are also supplying hand <br />
+sanitizers, and face masks and gloves upon request made at the time of booking to <br />
+our clients to make their journey safer.We believe that your ride should not only be comfortable, but as safe as possible. <br /> To ensure this, we have a variety of procedures in place to
         make sure that you and your loved ones are transported with the utmost care.</p>
         <div className="border-t-4 border-orange-600 w-52 mb-10 mx-auto"></div>
         <div className="flex flex-col md:flex-row items-start justify-start">
@@ -51,7 +54,8 @@ function HealthSafety() {
               <h4 className="text-orange-500 font-bold text-lg mb-2">Service 1</h4>
               {/* Description */}
               <p className="text-white text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
               </p>
             </div>
 
@@ -66,7 +70,8 @@ function HealthSafety() {
               </div>
               <h4 className="text-orange-500 font-bold text-lg mb-2">Service 2</h4>
               <p className="text-white text-sm">
-                Praesent tincidunt, enim et fringilla elementum.
+                Praesent tincidunt, enim et fringilla elementum. <br />
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
               </p>
             </div>
 
@@ -81,7 +86,8 @@ function HealthSafety() {
               </div>
               <h4 className="text-orange-500 font-bold text-lg mb-2">Service 3</h4>
               <p className="text-white text-sm">
-                Maecenas auctor metus at dui suscipit, sit amet facilisis.
+                Maecenas auctor metus at dui suscipit, sit amet facilisis. <br />
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
               </p>
             </div>
 
@@ -96,7 +102,8 @@ function HealthSafety() {
               </div>
               <h4 className="text-orange-500 font-bold text-lg mb-2">Service 4</h4>
               <p className="text-white text-sm">
-                Curabitur efficitur nisi at neque varius.
+              Maecenas auctor metus at dui suscipit, sit amet facilisis. <br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
             </div>
           </div>
@@ -126,6 +133,11 @@ function HealthSafety() {
               During these uncertain times, we have implemented several measures to ensure the safety and health of our clients and staff. 
               Our vehicles are thoroughly cleaned and sanitized between each ride. Drivers are required to wear masks, and we provide hand 
               sanitizers for all passengers.
+              We are taking serious measures to ensure the health and safety of our clients. <br /> We
+are disinfecting our vehicles with Electrostatics foggers, between passenger <br />
+changes. Further, we have asked all our chauffeurs to wear face coverings to <br />
+protect themselves as well as our clients. Additionally, we are also supplying hand <br />
+sanitizers, and face masks and gloves upon request made at the time of booking to <br />
             </p>
           </div>
 

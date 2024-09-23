@@ -142,7 +142,7 @@ function Fleet() {
   </div>
 
   
-  <Slider {...sliderSettings} className="mt-8">
+  <Slider {...sliderSettings} className="mt-8 w-1/2 mx-auto">
   {[{
       quote: "Exceptional service and very professional. Highly recommend!",
       name: "John Doe",

@@ -93,7 +93,8 @@ const AboutUs = () => {
           <p className="text-gray-300 text-lg">
             With years of experience, we have been providing top-notch services
             to our clients. We pride ourselves on delivering quality and exceeding
-            expectations in every project.
+            With years of experience, we have been providing top-notch services to our clients. We pride ourselves on delivering quality and exceeding expectations in every project. <button></button>
+            expectations in every project. <br />   With years of experience, we have been providing top-notch services to our clients. We pride ourselves on delivering quality and exceeding With years of experience, we have been providing top-notch services to our clients. We pride ourselves on delivering quality and exceeding expectations in every project. expectations in every project.
           </p>
         </div>
 
@@ -180,7 +181,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <Slider {...sliderSettings} className="mt-8">
+      <Slider {...sliderSettings} className="mt-8 w-1/2 ml-96">
   {[{
       quote: "Exceptional service and very professional. Highly recommend!",
       name: "John Doe",
