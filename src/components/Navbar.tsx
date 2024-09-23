@@ -22,7 +22,7 @@ const Navbar: React.FC<NavbarProps> = ({ brandName, imageSrcPath, navItems, cont
   };
 
   return (
-    <div className="bg-white shadow-md p-4 relative">
+    <div className="bg-white shadow-md p-4  sticky top-0 z-50">
       {/* Top Contact Info Bar */}
       {contactInfo && (
         <div className="bg-orange-500 w-full p-2 flex items-center justify-center md:justify-start absolute top-0 left-0 right-0 z-10">
@@ -41,7 +41,7 @@ const Navbar: React.FC<NavbarProps> = ({ brandName, imageSrcPath, navItems, cont
       <nav className="mt-8 flex justify-between items-center relative z-20">
         {/* Brand Logo */}
         <Link to="/">
-          <img src={`${process.env.PUBLIC_URL}/assets/logo.jpg`} alt={brandName} className="h-12 w-60" />
+          <img src={`${process.env.PUBLIC_URL}/assets/logo.png`} alt={brandName} className="h-12 mt-2 w-50 ml-16" />
         </Link>
 
         {/* Hamburger Menu Button for Small Screens */}
