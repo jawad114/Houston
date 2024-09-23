@@ -79,7 +79,7 @@ const AboutUs = () => {
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white bg-black bg-opacity-50 p-4">
           <h2 className="text-3xl font-bold mb-4 text-center">About Us</h2>
           <p className="text-lg mb-6 text-center">
-            We offer a wide range of services to meet your needs.
+            We offer a wide range of services to meet your needs..
           </p>
         </div>
       </div>
