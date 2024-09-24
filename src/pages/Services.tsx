@@ -124,7 +124,7 @@ function Services() {
 
 </div>
 {/* Book A Ride Section */}
-<div className="relative bg-black w-full p-8 " style={{marginBottom:"60px"}}>
+<div className="relative bg-black w-full p-8  ">
   <div className="container mx-auto flex flex-col lg:flex-row items-center justify-evenly gap-8">
     {/* Google Map */}
     <div className="lg:w-1/2 w-full">
@@ -137,7 +137,7 @@ function Services() {
     </div>
 
     {/* Book a Ride Text */}
-    <div className="lg:w-1/2 w-full text-white lg:text-left text-center mt-28 mr-80 pb-40">
+    <div className="lg:w-1/2 w-full text-white lg:text-left text-center mt-28 mr-80 pb-20">
   <p className="text-orange-600 font-semibold text-xl">BEST PRICE</p>
   <h1 className="text-4xl font-bold">Book A Ride Now</h1>
   <p>

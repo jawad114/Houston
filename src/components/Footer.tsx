@@ -4,7 +4,7 @@ import { FaPhoneAlt } from 'react-icons/fa';
 const Footer: React.FC = () => {
   return (
     
-    <div className="bg-white text-gray-800  relative" style={{marginTop:"-50px"}}>
+    <div className="bg-white text-gray-800  relative" style={{marginTop:"-65px"}}>
         
 
        <div className="relative bg-orange-500 text-white p-12">
@@ -21,13 +21,10 @@ const Footer: React.FC = () => {
             opacity="0.3"
           />
         </svg>
-        <div className="relative z-10 flex flex-col items-center justify-center text-center">
-          <h3 className="text-2xl font-bold mb-4">For More Information</h3>
-          <p className="text-lg mb-4">Or to schedule service, contact us today!</p>
-          <div className="flex items-center justify-center">
-            <FaPhoneAlt className="text-white text-5xl mr-4" />
-            <span className="text-3xl font-bold">(888) 777-1820</span>
-          </div>
+        <div className="relative z-10 flex flex-col-2  items-center justify-center text-center">
+          <img src={`${process.env.PUBLIC_URL}/assets/footerr.png`} alt="" className='justify-start items-start mr-7'/>
+          <h3 className="text-4xl font-bold mb-4">For more information or to schedule service, <br /> contact us today! (888) 777-1820</h3>
+
         </div>
       </div>
       {/* Curvy lines */}
