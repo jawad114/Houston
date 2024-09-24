@@ -117,10 +117,11 @@ function Fleet() {
           The Best Luxury Fleet Available Across the World
         </h1>
         <p className='item-center justify-center text-white text-center'>
-          Below is a breakdown of the main vehicles we have on hand. <br />
-          If you would like something else, contact us for more information
+          Below is a breakdown of the main vehicles we have on hand. 
+          If you would like something else, contact us for more information<br />
           and we will do all we can to help!
         </p>
+        <div className='border-t-2 border-orange-500 mt-3 w-52 mx-auto'></div>
       </div>
 
       <div className="flex flex-wrap pt-5 bg-black justify-center">
