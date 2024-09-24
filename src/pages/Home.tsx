@@ -207,19 +207,19 @@ const HomePage: React.FC = () => {
         </div>
       </div>
 
-      <div className="relative bg-cover bg-center bg-no-repeat p-8 flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12 w-full" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/tyre.jpg)` }}>
-      <div className="w-full md:w-1/2 flex flex-col items-center text-center">
-  <h4 className="text-orange-500 text-lg font-semibold mr-28 mb-2">Our Advantage</h4>
-  <h2 className="text-3xl font-bold mb-6 mr-10">Why Choose Us</h2>
-  <div className="space-y-4 w-full">
+      <div className="relative bg-cover bg-center bg-no-repeat p-8 flex flex-col md:flex-row items-center g justify-center space-y-8 md:space-y-0 w-full" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/tyre.jpg)` }}>
+      <div className="w-full md:w-1/2 flex flex-col items-center text-left">
+  <h4 className="text-orange-500 text-xl font-semibold  mb-2">Our Advantage</h4>
+  <h2 className="text-4xl text-white  font-bold mb-6 ml-64">WE DELIVER ONLY THE <br />BEST SERVICE</h2>
+  <div className="space-y-4 w-full h-full  ">
   {[
-    { icon: 'car4.png', title: 'Best Rates' },
-    { icon: 'car4.png', title: 'Premium Service' },
-    { icon: 'car4.png', title: 'Experienced Drivers' }
+    { icon: 'car4.png', title: 'Individual approach​' },
+    { icon: 'car4.png', title: 'Comfort & Safety' },
+    { icon: 'car4.png', title: 'Professional drivers' }
   ].map((item, index) => (
     <div key={index} className="flex ml-80">
-      <img src={`${process.env.PUBLIC_URL}/assets/${item.icon}`} alt={item.title} className="w-8 h-8 mr-4" />
-      <p className="text-lg text-white">{item.title}</p>
+      <img src={`${process.env.PUBLIC_URL}/assets/${item.icon}`} alt={item.title} className="w-16 h-16 " />
+      <p className="text-lg text-white mt-6">{item.title}</p>
     </div>
   ))}
 </div>
