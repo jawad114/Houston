@@ -82,13 +82,12 @@ const AboutUs = () => {
         {/* Left Section */}
         <div className="flex flex-col justify-center space-y-6 sm:text-center sm:mr-48 hidden lg:flex">
   <span className="text-orange-500 font-semibold text-lg uppercase">Who We Are</span>
-  <h2 className="text-6xl text-white font-bold">We are committed to excellence</h2>
-  <p className="text-gray-300 text-lg ">
+  <h2 className="text-6xl text-white font-bold text-left">We are committed to excellence</h2>
+  <p className="text-gray-300 text-lg text-left ">
     With years of experience, we have been providing top-notch services
     to our clients. We pride ourselves on delivering quality and exceeding
-    expectations in every project. <br />
+    expectations in every project. 
     With years of experience, we have been providing top-notch services to our clients. We pride ourselves on delivering quality and exceeding expectations in every project.
-    <br />
     With years of experience, we have been providing top-notch services to our clients. We pride ourselves on delivering quality and exceeding expectations in every project.
   </p>
 </div>
@@ -199,7 +198,7 @@ const AboutUs = () => {
           <img
             src={boyImage}
             alt="Section Image"
-            className="w-1/1 h-96 px-18 object-cover rounded-lg ml-12 shadow-lg"
+            className="w-1/1 h-96 px-18 object-cover rounded-lg ml-8 shadow-lg"
           />
         </div>
 
