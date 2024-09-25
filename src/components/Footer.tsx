@@ -3,12 +3,16 @@ import { FaPhoneAlt } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
   return (
-    
-    <div className="bg-white text-gray-800  relative" style={{marginTop:"-65px"}}>
-        
-
-       <div className="relative bg-orange-500 text-white p-12">
-
+    <div 
+      className="bg-white text-gray-800 relative" 
+      style={{ 
+        marginTop: "-65px", 
+        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/footer.pg)`, 
+        backgroundSize: 'cover', 
+        backgroundPosition: 'center' 
+      }}
+    >
+      <div className="relative bg-orange-500 mb-40 pb-32 text-white p-12">
         <svg
           className="absolute top-0 left-0 w-full h-full z-0"
           viewBox="0 0 100 100"
@@ -21,12 +25,15 @@ const Footer: React.FC = () => {
             opacity="0.3"
           />
         </svg>
-        <div className="relative z-10 flex flex-col-2  items-center justify-center text-center">
-          <img src={`${process.env.PUBLIC_URL}/assets/footerr.png`} alt="" className='justify-start items-start mr-7'/>
-          <h3 className="text-4xl font-bold mb-4">For more information or to schedule service, <br /> contact us today! (888) 777-1820</h3>
-
+        <div className="relative z-10 flex flex-col items-center justify-center text-center">
+          <div className="flex items-center justify-center">
+            <img src={`${process.env.PUBLIC_URL}/assets/footerr.png`} alt="" className='mr-8'/>
+            <h3 className="text-4xl ">For more information or to schedule service, <br /> contact us today! <span className="text-4xl mt-2 font-bold">(888) 777-1820</span></h3>
+          </div>
+          
         </div>
       </div>
+
       {/* Curvy lines */}
       <div className="absolute inset-0 z-0">
         <svg
@@ -50,11 +57,11 @@ const Footer: React.FC = () => {
 
       {/* Footer */}
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-8">
+        <div className="text-center mb-16 " style={{marginTop:"-100px"}}>
           <img
-            src={`${process.env.PUBLIC_URL}/assets/logo.jpg`}
+            src={`${process.env.PUBLIC_URL}/assets/logo.png`}
             alt="Site Logo"
-            className="mx-auto w-29 h-24 mb-4"
+            className="mx-auto w-29 mb-4"
           />
           <p className="text-gray-500 mb-6">
             Providing exceptional services and unmatched quality. Experience the difference with us.
@@ -106,16 +113,12 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="text-center mt-8">
-          <p className="text-gray-600">For more information or to schedule service, contact us today!</p>
-          <div className="text-orange-500 text-3xl mt-4 flex justify-center">
-            <FaPhoneAlt />
-          </div>
-          <p className="text-orange-500 mt-2">(888) 777-1820</p>
-        </div>
-        <div className="border-t-2 border-orange-500 w-72 mx-auto mb-8 mt-9"></div>
-        <div className="text-center mt-4">
-          <p className="text-gray-600">
+        {/* Full Orange Line */}
+        <div className="border-t-2 border-orange-500 w-full mt-6 mb-2"></div>
+        
+        {/* Copyright */}
+        <div className="text-left mt-2">
+          <p className="text-gray-600 ml-4">
             &copy; {new Date().getFullYear()} Car Rental. All rights reserved.
           </p>
         </div>

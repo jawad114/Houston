@@ -124,8 +124,9 @@ function Fleet() {
         <div className='border-t-2 border-orange-500 mt-3 w-52 mx-auto'></div>
       </div>
 
+      {/* Fleet Slider Sections */}
       <div className="flex flex-wrap pt-5 bg-black justify-center">
-      <div className="w-96 h-60 mr-32 mb-10"> {/* Same width and height for slider */}
+        <div className="w-96 h-60 mb-10 lg:mr-32"> {/* Adjust for responsive */}
           <Slider {...sliderSettings}>
             {sliderImages.map((image, index) => (
               <div key={index} className="relative bg-black">
@@ -139,9 +140,11 @@ function Fleet() {
           </Slider>
         </div>
         <div className='relative bg-black'>
-          <h1 className='text-lg font-bold text-orange-600'>Mercedez Benz</h1>
-          <p className='text-sm text-white text-start'>The Mercedes-Benz S-Class has long been considered one <br />
-          of the best luxury sedans on the market.</p>
+          <h1 className='text-lg font-bold text-orange-600 text-center lg:text-left'>Mercedez Benz</h1>
+          <p className='text-sm text-white text-center lg:text-left'>
+            The Mercedes-Benz S-Class has long been considered one <br />
+            of the best luxury sedans on the market.
+          </p>
           <ul className='text-sm list-disc ml-8 mt-3 text-white text-left'>
             <li>Seating Capacity: 4</li>
             <li>Fuel Type: Petrol</li>
@@ -152,10 +155,14 @@ function Fleet() {
         </div>
       </div>
 
+      {/* Repeat Fleet Sections with same structure */}
       <div className="flex flex-wrap pt-5 bg-black justify-center ">
-      <div className='relative bg-black mr-32'>
-          <h1 className='text-lg font-bold text-orange-600'>Mercedez Benz</h1>
-          <p className='text-sm text-white text-start'>The Mercedes-Benz S-Class has long been considered one <br />of the best luxury sedans on the market.</p>
+        <div className='relative bg-black lg:mr-32 mb-10'>
+          <h1 className='text-lg font-bold text-orange-600 text-center lg:text-left'>Mercedez Benz</h1>
+          <p className='text-sm text-white text-center lg:text-left'>
+            The Mercedes-Benz S-Class has long been considered one <br />
+            of the best luxury sedans on the market.
+          </p>
           <ul className='text-sm list-disc ml-8 mt-3 text-white text-left'>
             <li>Seating Capacity: 4</li>
             <li>Fuel Type: Petrol</li>
@@ -180,7 +187,7 @@ function Fleet() {
       </div>
 
       <div className="flex flex-wrap pt-20 bg-black justify-center">
-      <div className="w-96 h-60 mr-32 "> {/* Same width and height for slider */}
+        <div className="w-96 h-60 mb-10 lg:mr-32"> {/* Adjust for responsive */}
           <Slider {...sliderSettings}>
             {sliderImages.map((image, index) => (
               <div key={index} className="relative bg-black">
@@ -194,9 +201,11 @@ function Fleet() {
           </Slider>
         </div>
         <div className='relative bg-black'>
-          <h1 className='text-lg font-bold text-orange-600'>Mercedez Benz</h1>
-          <p className='text-sm text-white text-start'>The Mercedes-Benz S-Class has long been considered one <br />
-          of the best luxury sedans on the market.</p>
+          <h1 className='text-lg font-bold text-orange-600 text-center lg:text-left'>Mercedez Benz</h1>
+          <p className='text-sm text-white text-center lg:text-left'>
+            The Mercedes-Benz S-Class has long been considered one <br />
+            of the best luxury sedans on the market.
+          </p>
           <ul className='text-sm list-disc ml-8 mt-3 text-white text-left'>
             <li>Seating Capacity: 4</li>
             <li>Fuel Type: Petrol</li>
@@ -208,9 +217,12 @@ function Fleet() {
       </div>
 
       <div className="flex flex-wrap bg-black justify-center pt-20">
-      <div className='relative bg-black mr-32'>
-          <h1 className='text-lg font-bold text-orange-600'>Mercedez Benz</h1>
-          <p className='text-sm text-white text-start'>The Mercedes-Benz S-Class has long been considered one <br />of the best luxury sedans on the market.</p>
+        <div className='relative bg-black lg:mr-32 mb-10'>
+          <h1 className='text-lg font-bold text-orange-600 text-center lg:text-left'>Mercedez Benz</h1>
+          <p className='text-sm text-white text-center lg:text-left'>
+            The Mercedes-Benz S-Class has long been considered one <br />
+            of the best luxury sedans on the market.
+          </p>
           <ul className='text-sm list-disc ml-8 mt-3 text-white text-left'>
             <li>Seating Capacity: 4</li>
             <li>Fuel Type: Petrol</li>
@@ -219,7 +231,7 @@ function Fleet() {
           </ul>
           <button className='bg-orange-600 text-white rounded-md px-4 py-2 mt-4'>Book Now</button>
         </div>
-        <div className="w-96 h-60"> {/* Same width and height for slider */}
+        <div className="w-96 h-60 mb-32"> {/* Same width and height for slider */}
           <Slider {...sliderSettings}>
             {sliderImages.map((image, index) => (
               <div key={index} className="relative bg-black">
@@ -232,10 +244,9 @@ function Fleet() {
             ))}
           </Slider>
         </div>
+        
       </div>
-      {/* Additional vehicle sections... */}
-
-      <div className="bg-black text-white p-8 w-full pb-28 pt-20">
+      <div className="bg-black text-white p-8 w-full pb-28">
   <div className="text-center mb-6">
     <h4 className="text-orange-500 text-lg font-semibold mb-2">Reviewed by People</h4>
     <h2 className="text-4xl font-bold mb-4">Clients' Testimonials</h2>
@@ -292,8 +303,6 @@ function Fleet() {
       ))}
   </div>
 </div>
-
-
     </div>
   );
 }
