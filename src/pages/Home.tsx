@@ -159,73 +159,80 @@ const HomePage: React.FC = () => {
       </div>
 
       <div className="bg-black text-white p-5 flex flex-col sm:flex-row items-center justify-center space-y-6 sm:space-y-0 sm:space-x-8 w-full">
-  <div className="w-full sm:w-1/3 sm:ml-80"> {/* Added margin to the right of the image */}
+  <div className="w-full sm:w-96 sm:h-96 flex justify-center"> {/* Center the image */}
     <img
       src={`${process.env.PUBLIC_URL}/assets/img.png`}
       alt="Special Offer"
-      className="w-full h-auto rounded-lg sm:w-full lg:w-full md:w-full"
+      className="w-full h-auto rounded-lg"
     />
   </div>
-  <div className="sm:w-2/3 text-center sm:text-left">
+  <div className="w-full sm:w-2/3 text-center sm:text-left flex flex-col items-center sm:items-start"> {/* Center text for small screens */}
     <h4 className="text-orange-500 text-lg font-semibold mb-2">About Company</h4>
     <h2 className="text-3xl font-bold mb-4">You start the engine <br /> and your adventure begins</h2>
-    <p className="text-gray-300 font-semibold text-lg mb-6">Certain but she but shyness why cottage. Guy the put instrument sir entreaties <br /> affronting. Pretended exquisite see cordially the you. Weeks quiet do vexed or <br /> whose. Motionless if no to affronting imprudence no precaution. My indulged <br /> as disposal strongly attended.</p>
-  <div className="flex justify-center space-x-6"> 
-  {["20%", "40%", "60%"].map((discount, index) => (
-    <div key={index} className="text-start items-start">
-      <img
-        src={`${process.env.PUBLIC_URL}/assets/car4.png`}
-        alt={`Icon ${index + 1}`}
-        className="w-20 h-20 mb-2 mr-64"
-      />
-      <p className="text-white text-4xl ml-3 font-bold">{discount}</p>
-      <p className="text-orange-600 font-semibold text-lg ml-3">Car Rental Outlets</p>
+    <p className="text-gray-300 font-semibold text-lg mb-6">
+      Certain but she but shyness why cottage. Guy the put instrument sir entreaties <br />
+      affronting. Pretended exquisite see cordially the you. Weeks quiet do vexed or <br />
+      whose. Motionless if no to affronting imprudence no precaution. My indulged <br />
+      as disposal strongly attended.
+    </p>
+    <div className="flex justify-center space-x-6"> 
+      {["20%", "40%", "60%"].map((discount, index) => (
+        <div key={index} className="text-center"> {/* Center discount text */}
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/car4.png`}
+            alt={`Icon ${index + 1}`}
+            className="w-20 h-20 mb-2"
+          />
+          <p className="text-white text-4xl font-bold">{discount}</p>
+          <p className="text-orange-600 font-semibold text-lg">Car Rental Outlets</p>
+        </div>
+      ))}
     </div>
-  ))}
-</div>
-
-
   </div>
 </div>
 
 
 
-      <div className="relative w-full">
-        <img
-          src={`${process.env.PUBLIC_URL}/assets/ccars.png`}
-          alt="New Offer"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col md:flex-row items-center justify-evenly px-4 md:px-8">
-          <div className="text-white text-center md:text-left">
-            <h3 className="text-6xl font-bold text-orange-500 mb-2"><span className='text-white'>Safe with</span>  <br />Professional Chauffeured <span className='text-white'>Car  <br />Services</span></h3>
-            <p className="text-lg">Book your ride and get amazing discounts today!</p>
-          </div>
-          <button className="bg-orange-500 text-white text-lg font-bold  px-6 py-4 rounded-lg hover:bg-orange-600 transition duration-300 mt-4 md:mt-0">
-            Book Now
-          </button>
-        </div>
-      </div>
 
-      <div className="relative bg-cover bg-center bg-no-repeat p-8 flex flex-col md:flex-row items-center g justify-center space-y-8 md:space-y-0 w-full" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/tyre.jpg)` }}>
-      <div className="w-full md:w-1/2 flex flex-col items-center text-left">
-  <h4 className="text-orange-500 text-xl font-semibold  mb-2">Our Advantage</h4>
-  <h2 className="text-4xl text-white  font-bold mb-6 ml-64">WE DELIVER ONLY THE <br />BEST SERVICE</h2>
-  <div className="space-y-4 w-full h-full  ">
-  {[
-    { icon: 'car4.png', title: 'Individual approach​' },
-    { icon: 'car4.png', title: 'Comfort & Safety' },
-    { icon: 'car4.png', title: 'Professional drivers' }
-  ].map((item, index) => (
-    <div key={index} className="flex ml-80">
-      <img src={`${process.env.PUBLIC_URL}/assets/${item.icon}`} alt={item.title} className="w-16 h-16 " />
-      <p className="text-lg text-white mt-6">{item.title}</p>
+<div className="relative w-full">
+  <img
+    src={`${process.env.PUBLIC_URL}/assets/ccars.png`}
+    alt="New Offer"
+    className="w-full object-cover h-96 md:h-full" // Setting height for small screens
+  />
+  <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col md:flex-row items-center justify-evenly px-4 md:px-8">
+    <div className="text-white text-center md:text-left">
+      <h3 className="text-6xl font-bold text-orange-500 mb-2">
+        <span className='text-white'>Safe with</span>  <br />
+        Professional Chauffeured <span className='text-white'>Car  <br />Services</span>
+      </h3>
+      <p className="text-lg">Book your ride and get amazing discounts today!</p>
     </div>
-  ))}
+    <button className="bg-orange-500 text-white text-lg font-bold px-6 py-4 rounded-lg hover:bg-orange-600 transition duration-300 mt-4 md:mt-0">
+      Book Now
+    </button>
+  </div>
 </div>
 
-</div>
 
+
+      <div className="relative bg-cover bg-center bg-no-repeat p-8 flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 w-full hidden md:flex" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/tyre.jpg)` }}>
+  <div className="w-full md:w-1/2 flex flex-col items-center text-left">
+    <h4 className="text-orange-500 text-xl font-semibold mb-2">Our Advantage</h4>
+    <h2 className="text-4xl text-white font-bold mb-6 ml-64">WE DELIVER ONLY THE <br />BEST SERVICE</h2>
+    <div className="space-y-4 w-full h-full">
+      {[
+        { icon: 'car4.png', title: 'Individual approach​' },
+        { icon: 'car4.png', title: 'Comfort & Safety' },
+        { icon: 'car4.png', title: 'Professional drivers' }
+      ].map((item, index) => (
+        <div key={index} className="flex ml-80">
+          <img src={`${process.env.PUBLIC_URL}/assets/${item.icon}`} alt={item.title} className="w-16 h-16" />
+          <p className="text-lg text-white mt-6">{item.title}</p>
+        </div>
+      ))}
+    </div>
+  </div>
 
   <div className="w-full md:w-1/2 flex flex-col items-center text-center space-y-4">
     <div>
@@ -238,6 +245,7 @@ const HomePage: React.FC = () => {
     </div>
   </div>
 </div>
+
 
   <div className='relative bg-black justify-center w-full items-center'>
     <div className='relative'>
