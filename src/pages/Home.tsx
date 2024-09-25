@@ -158,7 +158,7 @@ const HomePage: React.FC = () => {
 
       </div>
 
-      <div className="bg-black text-white p-5 flex flex-col sm:flex-row items-center justify-center space-y-6 sm:space-y-0 sm:space-x-8 w-full">
+      <div className="bg-black text-white p-5 flex flex-col sm:flex-row items-center justify-center lg:px-96 space-y-6 sm:space-y-0 sm:space-x-8 w-full">
   <div className="w-full sm:w-96 sm:h-96 flex justify-center"> {/* Center the image */}
     <img
       src={`${process.env.PUBLIC_URL}/assets/img.png`}
@@ -220,7 +220,7 @@ const HomePage: React.FC = () => {
   <div className="w-full md:w-1/2 flex flex-col items-center text-left">
     <h4 className="text-orange-500 text-xl font-semibold mb-2">Our Advantage</h4>
     <h2 className="text-4xl text-white font-bold mb-6 ml-64">WE DELIVER ONLY THE <br />BEST SERVICE</h2>
-    <div className="space-y-4 w-full h-full">
+    <div className="space-y-4 w-full h-full ml-28">
       {[
         { icon: 'car4.png', title: 'Individual approach​' },
         { icon: 'car4.png', title: 'Comfort & Safety' },
