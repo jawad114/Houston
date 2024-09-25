@@ -11,10 +11,10 @@ const ContactUs: React.FC = () => {
         <img
           src={`${process.env.PUBLIC_URL}/assets/cu.png`}
           alt="Car"
-          className="w-full h-80 object-cover" 
+          className="w-full h-full object-cover" 
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white bg-black bg-opacity-50 p-4">
-          <h2 className="text-3xl font-bold mb-4 text-center">Contact Us</h2>
+          <h2 className="text-6xl font-bold mb-4 text-center">Contact Us</h2>
           <p className="text-lg mb-6 text-center">Get a vehicle for any event and experience a safe,<br />
           pleasant trip to your destination.</p>
          
@@ -26,25 +26,25 @@ const ContactUs: React.FC = () => {
           We would love to hear from you! Contact us using any of the options below.
         </p>
         {/* Orange Line */}
-        <div className="w-24 mx-auto border-t-4 border-orange-600 "></div>
+        <div className="w-60 mx-auto border-t-2 border-orange-600 "></div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-10 pb-10 bg-black">
   {/* Row 1 */}
   <div className="flex flex-col items-center justify-center text-center">
-    <img src={`${process.env.PUBLIC_URL}/assets/call.png`} alt="Phone Icon" className="w-12 h-12 mb-4" />
+    <img src={`${process.env.PUBLIC_URL}/assets/call.png`} alt="Phone Icon" className="w-32 h-32 mb-4" />
     <h3 className="text-xl font-bold text-orange-500 mb-2">Phone</h3>
     <p className="text-gray-300">Call us at +123 456 7890</p>
   </div>
 
   <div className="flex flex-col items-center justify-center text-center">
-    <img src={`${process.env.PUBLIC_URL}/assets/call.png`} alt="Email Icon" className="w-12 h-12 mb-4" />
+    <img src={`${process.env.PUBLIC_URL}/assets/email.png`} alt="Email Icon" className="w-32 h-32 mb-4" />
     <h3 className="text-xl font-bold text-orange-500 mb-2">Email</h3>
     <p className="text-gray-300">Drop us a line at support@example.com</p>
   </div>
 
   <div className="flex flex-col items-center justify-center text-center">
-    <img src={`${process.env.PUBLIC_URL}/assets/call.png`} alt="Location Icon" className="w-12 h-12 mb-4" />
+    <img src={`${process.env.PUBLIC_URL}/assets/location.png`} alt="Location Icon" className="w-32 h-32 mb-4" />
     <h3 className="text-xl font-bold text-orange-500 mb-2">Location</h3>
     <p className="text-gray-300">Visit us at 123 Example Street, City, Country.</p>
   </div>
@@ -57,54 +57,75 @@ const ContactUs: React.FC = () => {
       <div className="bg-gray-900 p-10 pb-40  flex flex-col md:flex-row justify-between items-center">
         {/* Left: Message Us */}
         <div className="mb-8 md:mb-0 md:w-1/2">
-          <h2 className="text-3xl font-bold text-orange-500 mb-4">Message Us</h2>
-          <p className="text-gray-300">
-            Send us a message using the form, and we'll respond as soon as possible. <br />
-            Send us a message using the form, and we'll respond as soon as possible.
-            Send us a message using the form, and we'll respond as soon as possible. <br />
-            Send us a message using the form, and we'll respond as soon as possible.
-            Send us a message using the form, and we'll respond as soon as possible. <br />
-            Send us a message using the form, and we'll respond as soon as possible.
-            Send us a message using the form, and we'll respond as soon as possible.
+          <h2 className="text-3xl font-bold text-orange-500 mb-4 ml-32 pr-16">Message Us</h2>
+          <p className="text-gray-300 text-start ml-32 pr-32">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
           </p>
         </div>
 
         {/* Right: Contact Form */}
-        <form className="md:w-1/2">
-          <div className="mb-6">
-            <label className="block text-orange-500 mb-2" htmlFor="name">Name</label>
-            <input
-              className="w-full p-3 bg-gray-800 text-white rounded-lg"
-              type="text"
-              id="name"
-              placeholder="Your Name"
-            />
-          </div>
-          <div className="mb-6">
-            <label className="block text-orange-500 mb-2" htmlFor="email">Email</label>
-            <input
-              className="w-full p-3 bg-gray-800 text-white rounded-lg"
-              type="email"
-              id="email"
-              placeholder="Your Email"
-            />
-          </div>
-          <div className="mb-6">
-            <label className="block text-orange-500 mb-2" htmlFor="message">Message</label>
-            <textarea
-              className="w-full p-3 bg-gray-800 text-white rounded-lg"
-              id="message"
-             
-              placeholder="Your Message"
-            />
-          </div>
-          <button
-            className="w-full p-3 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition"
-            type="submit"
-          >
-            Send Message
-          </button>
-        </form>
+<form className="md:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-6">
+  {/* First Row: Name and Email */}
+  <div className="mb-6">
+    <label className="block text-orange-500 mb-2" htmlFor="name">Name</label>
+    <input
+      className="w-full p-3  bg-white text-white rounded-lg"
+      type="text"
+      id="name"
+      placeholder="Your Name"
+    />
+  </div>
+  <div className="mb-6">
+    <label className="block text-orange-500 mb-2" htmlFor="email">Email</label>
+    <input
+      className="w-full p-3 bg-white text-white rounded-lg"
+      type="email"
+      id="email"
+      placeholder="Your Email"
+    />
+  </div>
+
+  {/* Second Row: Phone Number and Company Name */}
+  <div className="mb-6">
+    <label className="block text-orange-500 mb-2" htmlFor="phone">Phone Number</label>
+    <input
+      className="w-full p-3 bg-white text-white rounded-lg"
+      type="text"
+      id="phone"
+      placeholder="Your Phone Number"
+    />
+  </div>
+  <div className="mb-6">
+    <label className="block text-orange-500 mb-2" htmlFor="company">Company Name</label>
+    <input
+      className="w-full p-3 bg-white text-white rounded-lg"
+      type="text"
+      id="company"
+      placeholder="Your Company Name"
+    />
+  </div>
+
+  {/* Third Row: Message */}
+  <div className="col-span-1 md:col-span-2 mb-6">
+    <label className="block text-orange-500 mb-2 " htmlFor="message">Message</label>
+    <textarea
+      className="w-full p-3 bg-white text-white rounded-lg"
+      id="message"
+      placeholder="Your Message"
+    />
+  </div>
+
+  {/* Submit Button */}
+  <div className="col-span-1 md:col-span-2 flex justify-center">
+    <button
+      className="w-full md:w-48 px-6 py-3 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition"
+      type="submit"
+    >
+      Ask a Question
+    </button>
+  </div>
+</form>
+
       </div>
 
       {/* Google Map Section */}
